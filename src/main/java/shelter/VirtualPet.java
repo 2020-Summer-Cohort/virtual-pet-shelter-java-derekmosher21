@@ -35,5 +35,27 @@ public class VirtualPet {
         return happiness;
     }
 
+    public void feedPet () {
+        hunger = hunger - 4;
+        thirst++;
+    }
+
+    public void waterPet () {
+        thirst = thirst - 3;
+        hunger++;
+    }
+
+    public void playWithPet () {
+        happiness = happiness + 5;
+        hunger++;
+        thirst++;
+    }
+
+    public void tick() {
+        hunger++;
+        thirst++;
+        happiness--;
+    }
+
 
 }

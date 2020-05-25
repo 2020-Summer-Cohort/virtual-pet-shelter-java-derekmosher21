@@ -5,9 +5,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VirtualPetShelter {
+
+    VirtualPet martin = new VirtualPet(8, 6, 12, "Martin", "Cat");
+    VirtualPet oliver = new VirtualPet(9, 4, 4, "Oliver", "Cat");
+
     private Map<String, VirtualPet> pets = new HashMap<>();
 
-    public Collection<VirtualPet> getAllPets() { return pets.values();}
+    public void addFirstPets() {
+        pets.put(martin.getPetName(), martin);
+        pets.put(oliver.getPetName(), oliver);
+    }
+
+    public Collection<VirtualPet> getAllPets() {
+        return pets.values();
+        System.out.println(return pets.values());
+    }
 
     public VirtualPet getVirtualPet(String petName) { return pets.get(petName); }
 
@@ -16,7 +28,6 @@ public class VirtualPetShelter {
     public void removePet (String petName) { pets.remove(petName); }
 
     public void feedPets (int hunger) {
-        return VirtualPet.getHunger
     }
 
 
