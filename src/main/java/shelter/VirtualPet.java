@@ -7,7 +7,7 @@ public class VirtualPet {
     private int thirst;
     private int happiness;
 
-    public VirtualPet(int hunger, int thirst, int happiness, String petName, String petDescription) {
+    public VirtualPet(String petName, String petDescription, int hunger, int thirst, int happiness) {
         this.hunger = hunger;
         this.thirst = thirst;
         this.happiness = happiness;
