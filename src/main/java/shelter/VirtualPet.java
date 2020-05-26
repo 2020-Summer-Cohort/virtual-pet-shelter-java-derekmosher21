@@ -35,17 +35,17 @@ public class VirtualPet {
         return happiness;
     }
 
-    public void feedPet () {
+    public void feedPet() {
         hunger = hunger - 4;
         thirst++;
     }
 
-    public void waterPet () {
+    public void waterPet() {
         thirst = thirst - 3;
         hunger++;
     }
 
-    public void playWithPet () {
+    public void playWithPet() {
         happiness = happiness + 5;
         hunger++;
         thirst++;
@@ -55,6 +55,10 @@ public class VirtualPet {
         hunger++;
         thirst++;
         happiness--;
+    }
+
+    protected boolean arePetsHealthy() {
+        return getHunger() < 20 && getThirst() < 20 && getHappiness() > 0;
     }
 
 
